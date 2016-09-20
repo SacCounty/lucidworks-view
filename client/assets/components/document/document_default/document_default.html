@@ -49,10 +49,15 @@
       <!-- Output of CONFIG BASED FIELD DISPLAY -->
       <p ng-repeat="(field, value) in vm.doc.fieldsToDisplay">
 
-        <span><strong>{{::field}}:	&nbsp;  </strong></span>
+        <span ng-if="::field == 'Item Title'" ><strong>{{::field}}:	&nbsp;  </strong></span>
+        <field ng-if="::field == 'Item Title'" value="::value" highlight="::vm.highlight[doc.id]" maxlength="200" hkey="{{field}}"></field>
+        
+        <span ng-if="::field == 'Department'" ><strong>{{::field}}:	&nbsp;  </strong></span>
+        <field ng-if="::field == 'Department'" value="::value" highlight="::vm.highlight[doc.id]" maxlength="200" hkey="{{field}}"></field>
 
-        <field value="::value" highlight="::vm.highlight[doc.id]" maxlength="200" hkey="{{field}}"></field>
+        <a ng-if="::field == 'pageurl'" ng-href="{{::value}}" ng-click="vm.postSignal({params: {lw_url: vm.doc.pageurl}})" rel="noopener" target="_blank">{{::vm.doc.pagename}}</a>
 
+        <field ng-if="::field == 'Summary'" value="::value" highlight="::vm.highlight[doc.id]" maxlength="500" hkey="content"></field>
       </p>
   </div>
 </article>

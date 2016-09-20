@@ -44,7 +44,7 @@
       if (typeof toFormat.indexOf === 'function' && toFormat.indexOf("Z") != -1 && toFormat.indexOf("T") != -1){
         result = Date.parse(toFormat);
         //most range facet displays don't need time info, so just do angular filter by default to day/month/year
-        result = $filter('date')(result, 'mediumDate')
+        result = $filter('date')(result, 'yyyy');
       } else {
         result = toFormat;
       }

@@ -36,3 +36,128 @@
   height: 16px;
   width: 16px;
 }
+
+/*Custom CSS*/
+.grid-block.vertical.ng-scope a {
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  line-height: 1.4em;
+  font-weight: 500;
+  color: #2b7eb5; }
+
+h3.head-field.ng-scope a {
+  font-size: 20px; }
+
+h3.head-field.ng-scope:before {
+  content: 'Meeting Title: ';
+  font-size: 1rem;
+  font-weight: bold; }
+
+#documentList > div:nth-child(odd) > article > div.detail.vertical.grid-content.small-12 {
+  background: #eee;
+  margin-bottom: 10px;
+  padding: 15px 30px;
+  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #bbb;
+  }
+
+.button.success {
+  background: #D36424;
+  color: #fff; }
+
+.button.success:hover, .button.success:focus {
+  background: #f18649;
+  color: #fff; }
+
+.title-bar.primary {
+    background-image: linear-gradient(to right, #2b7eb5 0, #042841 100%);
+    position: relative;
+    max-height: 200px;
+}
+
+body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.right.menu-bar.primary.condense {
+  display: none; }
+
+.menu-bar.primary {
+  background: transparent; }
+
+.menu-bar.primary > li > a:hover {
+  background: transparent; }
+
+body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.left.menu-bar.primary.condense {
+  max-width: 200px;
+  margin-right: 10px; }
+
+.is-active > .accordion-content {
+  display: block;
+  border-left: #042841 1px solid;
+  border-radius: 4px;
+  padding-top: 0px;
+  border-right: #042841 1px solid;
+  border-bottom: #042841 1px solid;
+  background: #eee;
+  }
+
+.block-list input[type="text"], .block-list input[type="password"], .block-list input[type="date"], .block-list input[type="datetime"], .block-list input[type="datetime-local"], .block-list input[type="month"], .block-list input[type="week"], .block-list input[type="email"], .block-list input[type="number"], .block-list input[type="search"], .block-list input[type="tel"], .block-list input[type="time"], .block-list input[type="url"], .block-list input[type="color"], .block-list textarea {
+  background: #042841; }
+
+.ng-pristine.ng-untouched.ng-valid::-webkit-input-placeholder {
+  color: #fff; }
+
+.ng-pristine.ng-untouched.ng-valid:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+.ng-pristine.ng-untouched.ng-valid:-ms-input-placeholder {
+  color: #fff; }
+
+.is-active > .accordion-title {
+  background: #eee;
+  color: #444; }
+
+.block-list li {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  }
+
+.card-result-comment {
+  margin-top: 1.25rem;
+  background: #eee; }
+
+.search-box .angucomplete-dropdown {
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #212121;
+    left: 0px;
+    padding: 14px;
+    position: absolute;
+    text-align: left;
+    z-index: 10000;
+    display: block;
+    max-width: 779px;
+    white-space: normal;
+    line-height: 1.4em;
+    min-width: 779px;
+}
+
+.highlight{
+	background-color:#E57F1A;
+  color:#222 !important;
+}
+.primary.title-bar{
+	max-height:100px;
+}
+
+@include breakpoint(medium) {
+  .title-bar .right .action-sheet {
+    width:250px;
+    left:auto;
+    right:0;
+    top:100%;
+    bottom:auto;
+    transform:translateX(0) translateY(0);
+    -webkit-transform:translateX(0) translateY(0);
+    transition:none;
+    &:before, &:after {left:auto;right:25px;}
+  }
+}
