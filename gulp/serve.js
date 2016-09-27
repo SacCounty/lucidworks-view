@@ -12,7 +12,7 @@ gulp.task('browsersync', ['build'], function() {
   var openPath = getOpenPath();
 
   var proxyConfig = {
-    target: fusionConfig.host+':'+fusionConfig.port
+    target: fusionConfig.host + ((fusionConfig.port) ? ':' + fusionConfig.port : '') + '/'
   };
 
   // Allow self signed proxys to pass through with setting.
