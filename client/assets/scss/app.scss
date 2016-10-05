@@ -53,7 +53,7 @@ h3.head-field.ng-scope:before {
   font-size: 1rem;
   font-weight: bold; }
 
-#documentList > div:nth-child(odd) > article > div.detail.vertical.grid-content.small-12 {
+#documentList > div:nth-child(odd) article > div.detail.vertical.grid-content {
   background: #eee;
   margin-bottom: 10px;
   padding: 15px 30px;
@@ -76,7 +76,19 @@ h3.head-field.ng-scope:before {
 }
 
 body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.right.menu-bar.primary.condense {
-  display: none; }
+  background: #ccc;
+  flex: 0 0 6%;
+  margin-left: 50px;
+  transition: .5s all;
+  }
+body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.right.menu-bar.primary.condense a {
+  color:#222;
+}
+body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.right.menu-bar.primary.condense:hover {
+  transition: .5s all;
+  background: #fff;
+}
+
 
 .menu-bar.primary {
   background: transparent; }

@@ -20,8 +20,8 @@ appConfig = { //eslint-disable-line
    *
    * To use https set the https server key and certificate. And set use_https to true.
    */
-  host: 'https://fusion.saccounty.net',
-  port: '',
+  host: 'http://azmorigan.saccounty.net',
+  port: '8764',
 
   proxy_allow_self_signed_cert: true, // Only turn on if you have a self signed proxy in front of fusion.
 
@@ -104,7 +104,7 @@ appConfig = { //eslint-disable-line
   //In search results, for each doc, use this field to generate link value when a user clicks on head_field
   head_url_field: 'meetingurl',
   //In search results, display a image in each doc page (leave empty for no image).
-  image_field: 'image',
+  image_field: '',
 
   // ADDING ADDITIONAL FIELDS TO DEFAULT DOCUMENTS
   //
@@ -136,6 +136,8 @@ appConfig = { //eslint-disable-line
   //    your_project_directory/client/assets/components/document/document.html
   fields_to_display:[],
   field_display_labels: {
+    'mimeType_s': 'File Type',
+    'modified': 'Modified'
     //'id': 'Identification Number'
     // you can add as many lines of labels as you want
   },
