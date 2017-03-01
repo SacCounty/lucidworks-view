@@ -9,9 +9,9 @@
       <div class="size" ng-if="::vm.doc.length_l">
         <span class="doc-label">Size:</span> <field value="::vm.doc.length_lFormatted"></field>
       </div>
-      <div class="mimetype" ng-if="::vm.doc.mimeType_s">
-        <span class="doc-label">File Type:</span> <field value="::vm.doc.mimeType_s" highlight="::vm.highlight[doc.id]" maxlength="200"
-               hkey="mimeType_s"></field>
+      <div class="mimetype" ng-if="::vm.doc.fileType_s">
+        <span class="doc-label">File Type:</span> <field value="::vm.doc.fileType_s" highlight="::vm.highlight[doc.id]" maxlength="200"
+               hkey="fileType_s"></field>
       </div>
       <div class="owner" ng-if="::vm.doc.creator">
         <span class="doc-label">Creator:</span> <field value="::vm.doc.creator" highlight="::vm.highlight[doc.id]" maxlength="200"

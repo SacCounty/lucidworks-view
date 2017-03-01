@@ -1,4 +1,5 @@
 <form class="content-block" ng-submit="vm.submit()">
+  <div ng-show="vm.submitting" class="loader"></div>
   <label>
     Username
     <input type="text" ng-model="vm.username" />
@@ -10,4 +11,5 @@
   <!-- The hidden input element only to catch RETURN press -->
   <input type="submit" style="display:none;" />
   <a class="button" ng-click="vm.submit()">Log In</a>
+  <span ng-show="vm.error" class="error">{{vm.error}}</span>
 </form>

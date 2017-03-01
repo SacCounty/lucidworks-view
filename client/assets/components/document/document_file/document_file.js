@@ -36,7 +36,7 @@
     }
 
     function processDocument(doc) {
-      doc.path = ('W:\\' + doc.id.substring(35)).replace('/', '\\');
+      doc.path = ('W:\\' + doc.id.substring(35)).replace(/\//g, '\\');
       doc.length_lFormatted = $filter('humanizeFilesize')(doc.length_l);
       doc.lastModified_dtFormatted = $filter('date')(doc.modified);
       doc.position = vm.position;

@@ -1,0 +1,97 @@
+form span.error {
+    clear: both;
+    display: block;
+    font-size: 18px;
+    background: #e0e0e0;
+    padding: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 3px 3px 3px 3px;
+}
+body {
+    background: #fff;
+    color: #222;
+    padding: 0;
+    margin: 0;
+    font-family: LatoWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: LatoWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #222;
+    text-rendering: optimizeLegibility;
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+    line-height: 1.4;
+}
+.content span{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+body>div>div.grid-frame.vertical.ng-scope>nav:nth-child(1)>ul.right.menu-bar.primary.condense {
+    background: #ccc;
+    -ms-flex: 0 0 6%;
+    flex: 0 0 6%;
+    margin-left: 25px;
+    transition: all .5s;
+}
+body>div>div.grid-frame.vertical.ng-scope>nav:nth-child(1)>ul.left.menu-bar.primary.condense {
+    max-width: 200px;
+    margin-right: 20px;
+    margin-left: -30px;
+}
+.title-bar .center:first-child:not(:last-child) {
+    margin-left: -30px;
+}
+.loader {
+    height: 25px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: #ddd;
+    bottom: 0px;
+    left: 0px;
+}
+.loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 24px;
+    background-color: #07304c;
+    animation: loading 2s linear infinite;
+}
+.loader:after {
+    content: 'LOADING...';
+    top: 6px;
+    position: relative;
+    left: 50%;
+    color: #aaa;
+}
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+form span.error {
+    clear: both;
+    display: block;
+    font-size: 18px;
+    background: #e0e0e0;
+    padding: 40px;
+    color: #333;
+    text-transform: uppercase;
+    border-radius: 3px 3px 3px 3px;
+}

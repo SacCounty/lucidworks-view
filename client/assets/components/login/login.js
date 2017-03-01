@@ -24,13 +24,13 @@
     var vm = this;
     vm.username = '';
     vm.password = '';
-    vm.error = null;
+    vm.error = '';
     vm.submitting = false;
 
     vm.submit = submit;
 
     function submit() {
-      vm.error = null;
+      vm.error = '';
       vm.submitting = true;
       AuthService
         .createSession(vm.username, vm.password)
@@ -43,9 +43,16 @@
 
       function failure(err) {
         vm.submitting = false;
-        vm.error = err;
+        if(err && err.data && err.data.code) {
+          if(err.data.code === 'authentication-error') {
+            vm.error = 'Invalid username or password. Please try again.'
+          } else {
+            vm.error = err.data.code;
+          }
+        } else {
+          vm.error = err;
+        }
       }
-
     }
   }
 })();

@@ -20,7 +20,7 @@ appConfig = { //eslint-disable-line
    *
    * To use https set the https server key and certificate. And set use_https to true.
    */
-  host: 'http://azmorigan.saccounty.net',
+  host: 'http://terra.saccounty.net',
   port: '8764',
 
   proxy_allow_self_signed_cert: true, // Only turn on if you have a self signed proxy in front of fusion.
@@ -136,8 +136,9 @@ appConfig = { //eslint-disable-line
   //    your_project_directory/client/assets/components/document/document.html
   fields_to_display:[],
   field_display_labels: {
-    'mimeType_s': 'File Type',
-    'modified': 'Modified'
+    'fileType_s': 'File Type',
+    'modified': 'Modified',
+    'creator': 'Creator'
     //'id': 'Identification Number'
     // you can add as many lines of labels as you want
   },
@@ -145,7 +146,7 @@ appConfig = { //eslint-disable-line
   /**
    * Number of documents shown per page, if not defined will default to 10.
    */
-  // docs_per_page: 10,
+   docs_per_page: 100,
 
   /**
    * Landing pages

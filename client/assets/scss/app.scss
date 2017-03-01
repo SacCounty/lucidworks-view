@@ -89,7 +89,6 @@ body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.right.menu
   background: #fff;
 }
 
-
 .menu-bar.primary {
   background: transparent; }
 
@@ -172,4 +171,13 @@ body > div > div.grid-frame.vertical.ng-scope > nav:nth-child(1) > ul.left.menu-
     transition:none;
     &:before, &:after {left:auto;right:25px;}
   }
+}
+.title-bar .center:first-child:not(:last-child){
+		margin-left: 5% !important;
+	}
+
+@media screen and (max-width:767px){
+	.title-bar .center:first-child:not(:last-child){
+		margin-left: -30px;
+	}
 }
