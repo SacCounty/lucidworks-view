@@ -124,7 +124,7 @@
      * Returns a fusion URL complete w/ endslash.
      */
     function getFusionUrl() {
-      return appConfig.host + ((appConfig.port) ? ':' + appConfig.port : '') + '/';
+      return appConfig.host + ':' + appConfig.port + '/';
     }
 
     function getQueryPipeline() {

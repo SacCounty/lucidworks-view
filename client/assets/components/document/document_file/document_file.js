@@ -27,7 +27,7 @@
   function Controller(DocumentService) {
     'ngInject';
     var vm = this;
-    var templateFields = ['id', 'length', 'mimeType', 'owner', 'lastModified'];
+    var templateFields = ['id', 'contentLength_l', 'path', 'fileType', 'summary_txt', 'creator', 'lastModified'];
     vm.getTemplateDisplayFieldName = getTemplateDisplayFieldName;
 
     activate();
@@ -37,8 +37,8 @@
     }
 
     function processDocument(doc) {
-      doc.path = ('W:\\' + doc.id.substring(35)).replace(/\//g, '\\');
       //set properties needed for display
+      doc.path = ('W:\\' + doc.id.substring(35)).replace(/\//g, '\\');
       doc._templateDisplayFields = DocumentService.setTemplateDisplayFields(doc, templateFields);
 
       return doc;
