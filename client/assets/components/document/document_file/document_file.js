@@ -24,24 +24,28 @@
 
   }
 
-  function Controller(SignalsService, $filter, PaginateService) {
+  function Controller(DocumentService) {
     'ngInject';
     var vm = this;
+    var templateFields = ['id', 'length', 'mimeType', 'owner', 'lastModified'];
+    vm.getTemplateDisplayFieldName = getTemplateDisplayFieldName;
 
     activate();
 
     function activate() {
-      vm.postSignal = SignalsService.postClickSignal;
       vm.doc = processDocument(vm.doc);
     }
 
     function processDocument(doc) {
       doc.path = ('W:\\' + doc.id.substring(35)).replace(/\//g, '\\');
-      doc.length_lFormatted = $filter('humanizeFilesize')(doc.length_l);
-      doc.lastModified_dtFormatted = $filter('date')(doc.modified);
-      doc.position = vm.position;
-      doc.page = PaginateService.getNormalizedCurrentPage();
+      //set properties needed for display
+      doc._templateDisplayFields = DocumentService.setTemplateDisplayFields(doc, templateFields);
+
       return doc;
+    }
+
+    function getTemplateDisplayFieldName(field){
+      return DocumentService.getTemplateDisplayFieldName(vm.doc, field);
     }
   }
 })();

@@ -1,24 +1,20 @@
 <article class="grid-block document document-file row">
   <div class="detail vertical grid-content">
-    <h3 class="head-field" >{{::vm.doc.path}}</h3>
+    <field class="subheader" value="::vm.doc._templateDisplayFields.id" maxlength="200"></field>
     <div class="large-8 xlarge-7 xx-large-6">
-      <div class="content" ng-if="::vm.doc.content_txt">
-        <field value="::vm.doc.content_txt" highlight="::vm.highlight[vm.doc.id]" maxlength="500" 
-              hkey="content_txt"></field>
+      <div class="size" ng-if="::vm.doc._templateDisplayFields.length">
+        <span class="doc-label">size:</span> <field value="::vm.doc._templateDisplayFields.length | humanizeFilesize"></field>
       </div>
-      <div class="size" ng-if="::vm.doc.length_l">
-        <span class="doc-label">Size:</span> <field value="::vm.doc.length_lFormatted"></field>
+      <div class="mimetype" ng-if="::vm.doc._templateDisplayFields.mimeType">
+        <span class="doc-label">mimetype:</span> <field value="::vm.doc._templateDisplayFields.mimeType" highlight="::vm.highlight[doc._templateDisplayFields.id]" maxlength="200"
+               hkey="{{::vm.getTemplateDisplayFieldName('mimeType')}}"></field>
       </div>
-      <div class="mimetype" ng-if="::vm.doc.fileType_s">
-        <span class="doc-label">File Type:</span> <field value="::vm.doc.fileType_s" highlight="::vm.highlight[doc.id]" maxlength="200"
-               hkey="fileType_s"></field>
+      <div class="owner" ng-if="::vm.doc._templateDisplayFields.owner">
+        <span class="doc-label">owner:</span> <field value="::vm.doc._templateDisplayFields.owner" highlight="::vm.highlight[doc._templateDisplayFields.id]" maxlength="200"
+               hkey="{{::vm.getTemplateDisplayFieldName('owner')}}"></field>
       </div>
-      <div class="owner" ng-if="::vm.doc.creator">
-        <span class="doc-label">Creator:</span> <field value="::vm.doc.creator" highlight="::vm.highlight[doc.id]" maxlength="200"
-               hkey="creator"></field>
-      </div>
-      <div class="last-modified" ng-if="::vm.doc.modified">
-        <span class="doc-label">Last Modified:</span> <field value="::vm.doc.lastModified_dtFormatted"></field> UTC
+      <div class="last-modified" ng-if="::vm.doc._templateDisplayFields.lastModified">
+        <span class="doc-label">last modified:</span> <field value="::vm.doc._templateDisplayFields.lastModified | date"></field> UTC
       </div>
 
      </div>
