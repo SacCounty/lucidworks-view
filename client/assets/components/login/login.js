@@ -48,11 +48,13 @@
 
       function failure(err) {
         vm.submitting = false;
-        if(err && err.data && err.data.code) {
-          if(err.data.code === 'authentication-error') {
-            vm.error = 'Invalid username or password. Please try again.'
+        if(err && err.data) {
+          if(err.data.msg && err.data.msg.includes('80090308: LdapErr: DSID-0C0903D9') === true) {
+            vm.error = 'Invalid password. Please try again.';
+          } else if( err.data.code && err.data.code === 'authentication-error'){
+            vm.error = 'Invalid username. Please try again.';
           } else {
-            vm.error = 'Unexpected security error. Please nofify Evan Shebatka';//err.data.code;
+            vm.error = 'Unexpected security error. Please notify Evan Shebatka';//err.data.code;
           }
         } else {
           vm.error = 'Unable to login due to server error. Please notify Kevin Ma.';//err;
