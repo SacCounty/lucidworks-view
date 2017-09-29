@@ -20,8 +20,8 @@ appConfig = { //eslint-disable-line
    *
    * To use https set the https server key and certificate. And set use_https to true.
    */
-  host: 'https://efusion.saccounty.net',
-  port: '',
+  host: 'http://chicken.saccounty.net',
+  port: '8764',
 
   proxy_allow_self_signed_cert: true, // Only turn on if you have a self signed proxy in front of fusion.
 
@@ -51,8 +51,8 @@ appConfig = { //eslint-disable-line
    * to use anonymous access.
    */
   anonymous_access: {
-    username: 'admin',
-    password: 'p4$$w0rd'
+    username: 'agendasearch',
+    password: ''
   },
 
   // The name of your collection
