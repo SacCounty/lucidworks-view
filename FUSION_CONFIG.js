@@ -20,7 +20,7 @@ appConfig = { //eslint-disable-line
    *
    * To use https set the https server key and certificate. And set use_https to true.
    */
-  host: 'http://terra.saccounty.net',
+  host: 'http://hubble.saccounty.net',
   port: '8764',
 
   proxy_allow_self_signed_cert: true, // Only turn on if you have a self signed proxy in front of fusion.

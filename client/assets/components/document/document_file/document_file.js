@@ -38,7 +38,17 @@
 
     function processDocument(doc) {
       //set properties needed for display
-      doc.path = ('W:\\' + doc.id.substring(35)).replace(/\//g, '\\');
+      var shareIndex = doc.id.indexOf('$') + 1;
+      var share = doc.id.substring(0,shareIndex);
+      var drive = '';
+
+      if(share.includes('workgroup')) {
+        drive = 'W:';
+      } else if(share.includes('confidential')) {
+        drive = 'X:';
+      }
+
+      doc.path = (drive + doc.id.substring(shareIndex)).replace(/\//g, '\\');
       doc._templateDisplayFields = DocumentService.setTemplateDisplayFields(doc, templateFields);
 
       return doc;

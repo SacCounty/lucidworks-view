@@ -54,10 +54,10 @@
           } else if( err.data.code && err.data.code === 'authentication-error'){
             vm.error = 'Invalid username. Please try again.';
           } else {
-            vm.error = 'Unexpected security error. Please notify Evan Shebatka';//err.data.code;
+            vm.error = 'Unexpected security error.';//err.data.code;
           }
         } else {
-          vm.error = 'Unable to login due to server error. Please notify Kevin Ma.';//err;
+          vm.error = 'Unable to login due to server error.';//err;
         }
       }
     }
