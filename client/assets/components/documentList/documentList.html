@@ -2,6 +2,7 @@
   <div ng-repeat="doc in vm.docs" ng-switch="::vm.getDocType(doc)">
     <!-- <document-example ng-switch-when="string_matching_data_connector" doc="doc" highlight="vm.highlighting"></document-example> -->
     <document-file ng-switch-when="lucid.fs/smb" doc="doc" position="vm.getDocPosition(doc,vm.docs)" highlight="vm.highlighting"></document-file>
+    <document-file ng-switch-when="lucid.smb/smb" doc="doc" position="vm.getDocPosition(doc,vm.docs)" highlight="vm.highlighting"></document-file>
     <document-jira ng-switch-when="lucid.anda/jira" doc="doc" position="vm.getDocPosition(doc,vm.docs)" highlight="vm.highlighting"></document-jira>
     <document-slack ng-switch-when="lucid.slack/slack" doc="doc" position="vm.getDocPosition(doc,vm.docs)" highlight="vm.highlighting"></document-slack>
     <document-twitter ng-switch-when="lucid.twitter.search/twitter_search" doc="doc" position="vm.getDocPosition(doc,vm.docs)" highlight="vm.highlighting"></document-twitter>
